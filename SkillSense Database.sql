@@ -200,3 +200,39 @@ from competency_passport;
 select
     round(avg(competency_score), 2) as average_competency_score
 from competency_passport;
+
+alter table officials
+add constraint fk_official_department
+foreign key (department_id)
+references departments(department_id);
+
+alter table assessments
+add constraint fk_assessment_official
+foreign key (official_id)
+references officials(official_id);
+
+alter table questions
+add constraint fk_question_competency
+foreign key (competency_id)
+references competencies(competency_id);
+
+alter table responses
+add constraint fk_response_assessment
+foreign key (assessment_id)
+references assessments(assessment_id);
+
+alter table responses
+add constraint fk_response_question
+    
+foreign key (question_id)
+references questions(question_id);
+
+alter table competency_passport
+add constraint fk_passport_official
+foreign key (official_id)
+references officials(official_id);
+
+alter table competency_passport
+add constraint fk_passport_competency
+foreign key (competency_id)
+references competencies(competency_id);
