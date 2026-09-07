@@ -1,3 +1,4 @@
+ HEAD
 # SkillSense — AI-Powered Competency Intelligence Platform
 Smart India Hackathon 2026 · SIH26101 · Theme: Smart Education
 
@@ -107,3 +108,6 @@ skillsense/
 - Spaced reassessment scheduler (competency decay detection)
 - AI-generated MCQs from uploaded PDFs/docs (feed extracted text into `question_gen.py`)
 - Migrate SQLite → PostgreSQL + Alembic migrations for production
+=======
+# SkillSense
+>>>>>>> b416d9f16436732cc091c00f5fecd1f5714ec3fb
